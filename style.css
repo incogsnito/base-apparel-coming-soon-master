@@ -1,15 +1,110 @@
+@font-face {
+  font-family: "Josefin Sans";
+  src: url("./Josefin_Sans/JosefinSans-VariableFont_wght.ttf");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Josefin Sans";
+  src: url("./Josefin_Sans/JosefinSans-VariableFont_wght.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Josefin Sans";
+  src: url("./Josefin_Sans/JosefinSans-VariableFont_wght.ttf");
+  font-weight: 600;
+  font-style: normal;
+}
+
 *,
 *::before,
-*::after{
+*::after {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-img{
+body{
+  padding-block-start: 2em;
+  font-family: "Josefin Sans", sans-serif;
+  line-height: 1.7;
+  text-align: center;
+}
+
+img {
   min-width: 100%;
 }
 
-header{
-  max-width: 60px;
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
 }
+
+
+
+.container{
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.logo{
+  padding-inline-start: 2em;
+  max-width: 40px;
+}
+
+.info{
+  padding-block: 1.5em;
+  padding-inline: 1.1em;
+}
+
+
+.info h2{
+  letter-spacing: 4px;
+  line-height: 1.2;
+  margin-block-end: 1em;
+  text-transform: uppercase;
+  font-size: 40px;
+  font-weight: 600;
+  color: hsl(0, 6%, 24%);
+}
+
+.info h2 > span{
+  font-weight: 300;
+  color: hsl(0, 36%, 70%);
+}
+
+.info p{
+  color:hsl(0, 36%, 70%);
+}
+
+
+.form__container{
+  border: 1px solid hsl(0, 36%, 70%);
+  padding-block: 0.6em;
+  padding-inline: 1em;
+  max-width: 90%;
+  margin-inline: auto;
+  border-radius: 50px;
+ 
+}
+
+.form__container button, input{
+  border: none;
+}
+
+
+.form__container button{
+  background-image: linear-gradient(135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%));
+}
+
+
+
+
+
