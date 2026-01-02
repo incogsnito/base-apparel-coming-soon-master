@@ -28,7 +28,7 @@
 }
 
 body{
-  padding-block-start: 2em;
+  padding-block: 2em;
   font-family: "Josefin Sans", sans-serif;
   line-height: 1.7;
   text-align: center;
@@ -86,24 +86,41 @@ textarea {
 
 
 .form__container{
-  border: 1px solid hsl(0, 36%, 70%);
-  padding-block: 0.6em;
-  padding-inline: 1em;
-  max-width: 90%;
+  position: relative;
+  min-width: 90%;
   margin-inline: auto;
-  border-radius: 50px;
- 
 }
 
-.form__container button, input{
-  border: none;
+
+
+.form__container input{
+  width: 100%;
+  padding: 1em;
+  border-radius: 50px;
+  border-radius: 1px solid;
+  border: 1px solid hsl(0, 36%, 70%);
+}
+
+.form__container input::placeholder{
+   color:hsl(0, 36%, 70%);
 }
 
 
 .form__container button{
-  background-image: linear-gradient(135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%));
+  cursor: pointer;
+  position: absolute;
+  height: 100%;
+  border:none;
+  right: 0px;
+  padding-inline: 2.5em;
+  border-radius: 50px;
+  background-image: linear-gradient(135deg, hsl(0, 80%, 86%),  hsl(0, 74%, 74%)) ;
 }
 
+
+.form__container button:hover{
+  opacity: 0.7;
+}
 
 
 
