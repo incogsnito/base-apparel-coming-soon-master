@@ -93,6 +93,9 @@ textarea {
   position: relative;
   min-width: 90%;
   margin-inline: auto;
+  display:flex;
+  align-items: center;
+
 }
 
 .form__container input {
@@ -129,12 +132,29 @@ textarea {
   display: none;
 }
 
+input:focus{
+  outline: ;
+}
+
+.error{
+  display: none;
+}
+
+.form__container .error.active {
+  display:block;
+  position: absolute;
+  right: 7rem;
+  bottom: 0.35rem;
+  font-size: 0.75rem;
+  pointer-events: none;
+}
+
 @media screen and (min-width: 43.75rem) {
   body{
     background-image: url("./base-apparel-coming-soon-master/images/bg-pattern-desktop.svg");
     padding-block: 0;
     text-align: left;
-  }
+    }
   .container {
     min-height: 100vh;
     flex-direction: row;
@@ -164,7 +184,8 @@ textarea {
   }
 
   .logo{
-    padding: 0;
+    padding-inline: 0;
+    margin-block-end: 5em;
   }
 
 
