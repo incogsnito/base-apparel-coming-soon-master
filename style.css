@@ -33,7 +33,6 @@ body {
 }
 
 body {
-  
   padding-block-start: 2em;
   padding-block-end: 5em;
   font-family: "Josefin Sans", sans-serif;
@@ -93,9 +92,8 @@ textarea {
   position: relative;
   min-width: 90%;
   margin-inline: auto;
-  display:flex;
+  display: flex;
   align-items: center;
-
 }
 
 .form__container input {
@@ -125,23 +123,23 @@ textarea {
 
 .form__container button:hover {
   opacity: 0.7;
-  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.11), 0 16px 16px rgba(0, 0, 0, 0.11)
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.11), 0 16px 16px rgba(0, 0, 0, 0.11);
 }
 
 .lady-desktop {
   display: none;
 }
 
-input:focus{
-  outline: ;
+input:focus {
+  outline: solid 2px hsl(0, 93%, 68%);
 }
 
-.error{
+.error {
   display: none;
 }
 
 .form__container .error.active {
-  display:block;
+  display: block;
   position: absolute;
   right: 7rem;
   bottom: 0.35rem;
@@ -149,12 +147,16 @@ input:focus{
   pointer-events: none;
 }
 
+.invalid {
+  color: hsl(0, 93%, 68%);
+}
+
 @media screen and (min-width: 43.75rem) {
-  body{
+  body {
     background-image: url("./base-apparel-coming-soon-master/images/bg-pattern-desktop.svg");
     padding-block: 0;
     text-align: left;
-    }
+  }
   .container {
     min-height: 100vh;
     flex-direction: row;
@@ -163,13 +165,13 @@ input:focus{
     margin-left: auto;
   }
 
-  .sub__container{
+  .sub__container {
     padding-block-start: 3em;
-    display:flex;
+    display: flex;
     flex-direction: column;
   }
 
-  .info{
+  .info {
     margin-block-start: 2em;
     padding: 0;
   }
@@ -178,21 +180,22 @@ input:focus{
     display: none;
   }
 
-  .lady-desktop{
-    display:block;
-    height: 100%
+  .lady-desktop {
+    display: block;
+    height: 100%;
   }
 
-  .logo{
+  .logo {
     padding-inline: 0;
     margin-block-end: 5em;
   }
 
-
-
-  .wrapper{
+  .wrapper {
     max-width: 500px;
   }
 
-
+  .invalid {
+    margin-block-start: 1em;
+    padding-inline-start: 1em;
+  }
 }
