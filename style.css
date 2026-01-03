@@ -60,9 +60,8 @@ textarea {
 }
 
 .logo {
-  padding-inline-start: 2em;
   max-width: 200px;
-  display: inline-flex;
+  padding-inline-start: 1em;
 }
 
 .info {
@@ -73,9 +72,9 @@ textarea {
 .info h2 {
   letter-spacing: 4px;
   line-height: 1.2;
-  margin-block-end: 1em;
+  margin-block-end: 1rem;
   text-transform: uppercase;
-  font-size: 40px;
+  font-size: clamp(2.5rem, 0.938rem + 4.167vw, 4.688rem);
   font-weight: 600;
   color: hsl(0, 6%, 24%);
 }
@@ -100,7 +99,6 @@ textarea {
   width: 100%;
   padding: 1em;
   border-radius: 50px;
-  border-radius: 1px solid;
   border: 1px solid hsl(0, 36%, 70%);
 }
 
@@ -118,27 +116,42 @@ textarea {
   padding-inline: 2.5em;
   border-radius: 50px;
   background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.11), 0 4px 4px rgba(0, 0, 0, 0.11);
+  transition: 0.2s ease-in;
 }
 
 .form__container button:hover {
   opacity: 0.7;
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.11), 0 16px 16px rgba(0, 0, 0, 0.11)
 }
 
 .lady-desktop {
   display: none;
 }
 
-@media screen and (min-width: 56.25rem) {
-
+@media screen and (min-width: 43.75rem) {
   body{
     background-image: url("./base-apparel-coming-soon-master/images/bg-pattern-desktop.svg");
-    padding-block-end: 0;
+    padding-block: 0;
     text-align: left;
   }
   .container {
-    flex-direction: column;
+    min-height: 100vh;
+    flex-direction: row;
     width: 95%;
+    justify-content: space-between;
     margin-left: auto;
+  }
+
+  .sub__container{
+    padding-block-start: 3em;
+    display:flex;
+    flex-direction: column;
+  }
+
+  .info{
+    margin-block-start: 2em;
+    padding: 0;
   }
 
   .lady {
@@ -146,14 +159,18 @@ textarea {
   }
 
   .lady-desktop{
-    display:flex;
+    display:block;
+    height: 100%
   }
 
+  .logo{
+    padding: 0;
+  }
+
+
+
   .wrapper{
-    display: flex;
-    gap: 4em;
-    flex-direction: row-reverse;
-    justify-content: space-between
+    max-width: 500px;
   }
 
 
