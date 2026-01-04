@@ -151,6 +151,10 @@ input:focus {
   color: hsl(0, 93%, 68%);
 }
 
+.lady{
+  width: 100%;
+  object-fit: cover;
+  }
 @media screen and (min-width: 43.75rem) {
   body {
     background-image: url("./base-apparel-coming-soon-master/images/bg-pattern-desktop.svg");
